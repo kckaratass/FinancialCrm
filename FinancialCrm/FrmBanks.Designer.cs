@@ -185,7 +185,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1446, 50);
+            this.panel2.Size = new System.Drawing.Size(1230, 50);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -426,7 +426,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1247, 547);
+            this.ClientSize = new System.Drawing.Size(1234, 536);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
