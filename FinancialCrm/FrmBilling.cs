@@ -48,5 +48,46 @@ namespace FinancialCrm
             var values = db.Bills.ToList(); 
             dataGridView1.DataSource = values;
         }
+
+        private void btnRemoveBill_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtBillId.Text);
+            var removeValue = db.Bills.Find(id);
+
+            db.Bills.Remove(removeValue);
+            db.SaveChanges();
+
+            MessageBox.Show("Ödeme Başarılı Bir Şekilde Sistemden Silindi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void btnUpdateBill_Click(object sender, EventArgs e)
+        {
+            string Title = txtBillTitle.Text;
+            decimal Amount = decimal.Parse(txtBillAmount.Text);
+            string Period = txtBillPeriod.Text;
+            int id = int.Parse(txtBillId.Text);
+
+            var values = db.Bills.Find(id);
+
+            values.BillTitle = Title;
+            values.BillAmount = Amount;
+            values.BillPeriod = Period;
+            values.BillId = id;
+
+            db.SaveChanges();   
+            MessageBox.Show("Ödeme Başarılı Bir Şekilde Güncellendi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var updatedValues = db.Bills.ToList();
+            dataGridView1.DataSource = updatedValues;
+        }
+
+        private void bntBanksForm_Click(object sender, EventArgs e)
+        {
+            FrmBanks frm = new FrmBanks();
+            frm.Show();
+            this.Hide();
+        }
+
+
     }
 }

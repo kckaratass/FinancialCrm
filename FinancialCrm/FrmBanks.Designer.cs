@@ -33,7 +33,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBillForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -74,13 +74,13 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnBillForm);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(232, 487);
+            this.panel1.Size = new System.Drawing.Size(232, 519);
             this.panel1.TabIndex = 0;
             // 
             // button8
@@ -131,17 +131,18 @@
             this.button5.Text = "Banka Hareketleri";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBillForm
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(30, 178);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(169, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Giderler";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBillForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBillForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBillForm.ForeColor = System.Drawing.Color.White;
+            this.btnBillForm.Location = new System.Drawing.Point(30, 178);
+            this.btnBillForm.Name = "btnBillForm";
+            this.btnBillForm.Size = new System.Drawing.Size(169, 46);
+            this.btnBillForm.TabIndex = 3;
+            this.btnBillForm.Text = "Giderler";
+            this.btnBillForm.UseVisualStyleBackColor = true;
+            this.btnBillForm.Click += new System.EventHandler(this.btnBillForm_Click);
             // 
             // button3
             // 
@@ -311,7 +312,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(256, 221);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(974, 314);
+            this.groupBox1.Size = new System.Drawing.Size(974, 346);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Son 5 Banka Hareketi";
@@ -426,7 +427,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1234, 536);
+            this.ClientSize = new System.Drawing.Size(1234, 566);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -460,7 +461,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBillForm;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
