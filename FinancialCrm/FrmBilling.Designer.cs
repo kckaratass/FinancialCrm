@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(154)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -78,7 +78,7 @@
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Location = new System.Drawing.Point(30, 394);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(169, 46);
@@ -90,7 +90,7 @@
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Location = new System.Drawing.Point(30, 339);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(169, 46);
@@ -102,19 +102,20 @@
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(30, 285);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(169, 46);
             this.button6.TabIndex = 5;
             this.button6.Text = "Dashboard";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(30, 232);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(169, 46);
@@ -126,7 +127,7 @@
             // 
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button.ForeColor = System.Drawing.Color.White;
+            this.button.ForeColor = System.Drawing.Color.Black;
             this.button.Location = new System.Drawing.Point(30, 178);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(169, 46);
@@ -138,7 +139,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(30, 125);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(169, 46);
@@ -150,7 +151,7 @@
             // 
             this.bntBanksForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntBanksForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bntBanksForm.ForeColor = System.Drawing.Color.White;
+            this.bntBanksForm.ForeColor = System.Drawing.Color.Black;
             this.bntBanksForm.Location = new System.Drawing.Point(30, 73);
             this.bntBanksForm.Name = "bntBanksForm";
             this.bntBanksForm.Size = new System.Drawing.Size(169, 46);
@@ -163,7 +164,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(30, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 46);
@@ -244,8 +245,9 @@
             // 
             // txtBillPeriod
             // 
-            this.txtBillPeriod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtBillPeriod.BackColor = System.Drawing.Color.MediumTurquoise;
             this.txtBillPeriod.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtBillPeriod.ForeColor = System.Drawing.Color.Black;
             this.txtBillPeriod.Location = new System.Drawing.Point(115, 133);
             this.txtBillPeriod.Name = "txtBillPeriod";
             this.txtBillPeriod.Size = new System.Drawing.Size(870, 32);
@@ -263,8 +265,9 @@
             // 
             // txtBillAmount
             // 
-            this.txtBillAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtBillAmount.BackColor = System.Drawing.Color.MediumTurquoise;
             this.txtBillAmount.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtBillAmount.ForeColor = System.Drawing.Color.Black;
             this.txtBillAmount.Location = new System.Drawing.Point(115, 92);
             this.txtBillAmount.Name = "txtBillAmount";
             this.txtBillAmount.Size = new System.Drawing.Size(870, 32);
@@ -282,8 +285,9 @@
             // 
             // txtBillTitle
             // 
-            this.txtBillTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtBillTitle.BackColor = System.Drawing.Color.MediumTurquoise;
             this.txtBillTitle.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtBillTitle.ForeColor = System.Drawing.Color.Black;
             this.txtBillTitle.Location = new System.Drawing.Point(115, 53);
             this.txtBillTitle.Name = "txtBillTitle";
             this.txtBillTitle.Size = new System.Drawing.Size(870, 32);
@@ -301,8 +305,9 @@
             // 
             // txtBillId
             // 
-            this.txtBillId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtBillId.BackColor = System.Drawing.Color.MediumTurquoise;
             this.txtBillId.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtBillId.ForeColor = System.Drawing.Color.Black;
             this.txtBillId.Location = new System.Drawing.Point(115, 13);
             this.txtBillId.Name = "txtBillId";
             this.txtBillId.Size = new System.Drawing.Size(870, 32);
@@ -342,7 +347,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1234, 566);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

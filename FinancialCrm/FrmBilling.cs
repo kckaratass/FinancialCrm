@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinancialCrm.Models;
 
@@ -19,6 +13,7 @@ namespace FinancialCrm
         }
 
         FinancialCrmDbEntities1 db = new FinancialCrmDbEntities1();
+
         private void FrmBilling_Load(object sender, EventArgs e)
         {
             var values = db.Bills.ToList();
@@ -28,6 +23,7 @@ namespace FinancialCrm
         private void btnBillList_Click(object sender, EventArgs e)
         {
             var values = db.Bills.ToList();
+            dataGridView1.DataSource = values; // Bu satır eklenebilir, yoksa listelenmez.
         }
 
         private void btnCreateBill_Click(object sender, EventArgs e)
@@ -43,9 +39,9 @@ namespace FinancialCrm
 
             db.Bills.Add(bills);
             db.SaveChanges();
-            MessageBox.Show("Ödeme Başarılı Bir Şekilde Sisteme Eklendi","Ödeme & Faturalar",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Ödeme Başarılı Bir Şekilde Sisteme Eklendi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            var values = db.Bills.ToList(); 
+            var values = db.Bills.ToList();
             dataGridView1.DataSource = values;
         }
 
@@ -54,11 +50,20 @@ namespace FinancialCrm
             int id = int.Parse(txtBillId.Text);
             var removeValue = db.Bills.Find(id);
 
-            db.Bills.Remove(removeValue);
-            db.SaveChanges();
+            if (removeValue != null)
+            {
+                db.Bills.Remove(removeValue);
+                db.SaveChanges();
 
-            MessageBox.Show("Ödeme Başarılı Bir Şekilde Sistemden Silindi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ödeme Başarılı Bir Şekilde Sistemden Silindi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                // Silme sonrası listeyi güncelle
+                dataGridView1.DataSource = db.Bills.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Silinecek ödeme bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnUpdateBill_Click(object sender, EventArgs e)
@@ -70,15 +75,23 @@ namespace FinancialCrm
 
             var values = db.Bills.Find(id);
 
-            values.BillTitle = Title;
-            values.BillAmount = Amount;
-            values.BillPeriod = Period;
-            values.BillId = id;
+            if (values != null)
+            {
+                values.BillTitle = Title;
+                values.BillAmount = Amount;
+                values.BillPeriod = Period;
+                // values.BillId = id; // Id'yi değiştirmeye gerek yok.
 
-            db.SaveChanges();   
-            MessageBox.Show("Ödeme Başarılı Bir Şekilde Güncellendi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            var updatedValues = db.Bills.ToList();
-            dataGridView1.DataSource = updatedValues;
+                db.SaveChanges();
+                MessageBox.Show("Ödeme Başarılı Bir Şekilde Güncellendi", "Ödeme & Faturalar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                var updatedValues = db.Bills.ToList();
+                dataGridView1.DataSource = updatedValues;
+            }
+            else
+            {
+                MessageBox.Show("Güncellenecek ödeme bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void bntBanksForm_Click(object sender, EventArgs e)
@@ -88,6 +101,11 @@ namespace FinancialCrm
             this.Hide();
         }
 
-
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmDashboard dashboard = new FrmDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }
