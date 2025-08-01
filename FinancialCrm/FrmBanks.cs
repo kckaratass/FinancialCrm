@@ -68,6 +68,6 @@ namespace FinancialCrm
             FrmDashboard frm = new FrmDashboard();
             frm.Show();
             this.Hide();
-        }   
+        }
     }
 }

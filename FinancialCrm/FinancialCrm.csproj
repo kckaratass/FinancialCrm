@@ -165,6 +165,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Ekran görüntüsü 2025-08-01 113239.png" />
+    <Content Include="Images\Ekran görüntüsü 2025-08-01 113307.png" />
+    <Content Include="Images\Ekran görüntüsü 2025-08-01 113319.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
